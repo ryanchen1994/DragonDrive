@@ -25,13 +25,13 @@ import luxuryImage from '../assets/images/S__11903127_0.jpg';
 import driverImage from '../assets/images/driver-3978839_1280.jpg';
 
 const services = ref([
-  { id: 1, title: '包車旅遊', description: '適合周末出遊或連假旅行的靈活租車選擇。', image: tourImage },
+  { id: 1, title: '包車旅遊', description: '適合週末出遊或連假旅行的靈活租車選擇。', image: tourImage },
   { id: 2, title: '機場接送', description: '提供方便的機場接送服務，讓您的旅程更加輕鬆。', image: airportImage },
   { id: 3, title: '商業接待', description: '專業司機和豪華車款服務。', image: businessImage },
   { id: 4, title: '婚禮車隊', description: '婚禮專屬車隊服務，增加儀式感。', image: weddingImage },
-  { id: 5, title: '長途出差', description: '跨城市出差免擔心。', image: longTripImage },
+  { id: 5, title: '長途出差', description: '跨縣市出差免擔心。', image: longTripImage },
   { id: 6, title: '大型活動接送', description: '提供團體接送服務。', image: eventImage },
-  { id: 7, title: '豪華車體驗', description: '高端車款租賃。', image: luxuryImage },
+  { id: 7, title: '豪華車體驗', description: '高級車款租賃。', image: luxuryImage },
   { id: 8, title: '專業司機', description: '經驗豐富的專業駕駛。', image: driverImage }
 ]);
 </script>

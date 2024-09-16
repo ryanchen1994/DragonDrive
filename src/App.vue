@@ -46,9 +46,8 @@ body {
 }
 
 #app {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  /* 取消 #app 的左右邊距，以實現與左右邊緣對齊 */
+  padding: 0;
 }
 
 header {
@@ -57,14 +56,20 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 0 20px;
+  /* 取消 header 的左右邊距 */
+  padding: 0;
+  /* 設定 header 內部的左右邊距為 0 */
+  margin: 0;
+  width: 100%;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 20px; /* 設定左右內邊距，這是內部的間距 */
+  /* 確保 nav 不超出 header */
+  box-sizing: border-box;
 }
 
 .logo {
@@ -138,11 +143,13 @@ nav ul li a:hover {
     gap: 10px;
     position: absolute;
     top: 60px;
-    right: 20px;
+    right: 0; /* 設定為 0 以確保選單右對齊 */
     background-color: #fff;
-    width: 200px;
+    width: 100%; /* 設定選單寬度為 100% */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    /* 確保選單內部內容的邊距 */
+    box-sizing: border-box;
   }
 
   nav ul.open {
@@ -169,5 +176,9 @@ footer {
   padding: 1rem 0;
   background-color: #333;
   color: #fff;
+  /* 取消 footer 的左右邊距 */
+  margin: 0;
+  width: 100%;
 }
 </style>
+
