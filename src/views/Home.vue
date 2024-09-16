@@ -35,10 +35,13 @@ import ScrollingCards from '../components/ScrollingCards.vue';
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 4rem 2rem;
-  margin-bottom: 2rem;
+  padding: 0; /* 移除內邊距 */
+  margin: 0; /* 移除外邊距 */
   position: relative;
+  /* 若要與頂端列無間隙，可加入以下樣式以確保與頂端列對齊 */
+  margin-top: -4rem; /* 如有需要可調整此值，若 header 高度為 4rem 可設定為此值 */
 }
+
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
