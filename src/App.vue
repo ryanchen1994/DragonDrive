@@ -3,11 +3,12 @@
     <header>
       <nav>
         <router-link to="/" class="logo">龍行天下</router-link>
-        <ul>
-          <li><router-link to="/">首頁</router-link></li>
-          <li><router-link to="/about">關於我們</router-link></li>
-          <li><router-link to="/services">提供服務</router-link></li>
-          <li><router-link to="/contact">聯繫我們</router-link></li>
+        <button class="menu-toggle" @click="toggleMenu">☰</button> <!-- 漢堡選單按鈕 -->
+        <ul :class="{ open: isMenuOpen }">
+          <li><router-link to="/" @click="toggleMenu">首頁</router-link></li>
+          <li><router-link to="/about" @click="toggleMenu">關於我們</router-link></li>
+          <li><router-link to="/services" @click="toggleMenu">提供服務</router-link></li>
+          <li><router-link to="/contact" @click="toggleMenu">聯繫我們</router-link></li>
         </ul>
       </nav>
     </header>
@@ -21,7 +22,13 @@
 </template>
 
 <script setup>
-// 可以在這裡添加任何需要的邏輯
+import { ref } from 'vue';
+
+const isMenuOpen = ref(false); // 漢堡選單狀態
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
 </script>
 
 <style>
@@ -42,7 +49,7 @@ body {
 
 header {
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -63,10 +70,20 @@ nav {
   color: #333;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 nav ul {
   list-style-type: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
@@ -80,6 +97,27 @@ nav ul li a:hover {
   color: #007bff;
 }
 
+/* 手機RWD樣式 */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* 漢堡選單在小螢幕上顯示 */
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul.open {
+    display: flex; /* 顯示漢堡選單展開的選單 */
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
+
 main {
   min-height: calc(100vh - 100px);
   padding: 2rem 0;
@@ -90,35 +128,5 @@ footer {
   padding: 1rem 0;
   background-color: #333;
   color: #fff;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-.image-container {
-  width: 100%;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 2rem;
-  border-radius: 10px;
 }
 </style>

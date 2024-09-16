@@ -9,7 +9,7 @@
         <p>
           <i class="fas fa-map-marker-alt"></i> 
           地址：<a href="https://www.google.com/maps/search/?api=1&query=414台中市烏日區中華路185巷1號" target="_blank">
-            414台中市烏日區中華路185巷1號
+            台中市烏日區中華路185巷1號
           </a>
         </p>
         <!-- 電話超連結 -->
@@ -49,7 +49,7 @@
 </template>
 
 <script setup>
-import contactImage from '../assets/images/contact-us-6933645_1280.jpg';
+import contactImage from '../assets/images/contact-us-1908762_1280.png';
 </script>
 
 
@@ -59,6 +59,15 @@ import contactImage from '../assets/images/contact-us-6933645_1280.jpg';
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.image-container {
+  width: 100%;
+  height: 300px; /* 確保這裡有定義高度 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
 }
 
 .contact-content {
