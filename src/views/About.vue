@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1 class="section-title">關於我們</h1>
-    <div class="image-container" style="background-image: url('/src/assets/images/benz.png')"></div>
+    <div class="image-container" :style="{ backgroundImage: `url(${aboutImage})` }"></div>
     <p>龍行天下小客車租賃股份有限公司成立於1989年，致力於提供高品質、安全可靠的小客車租賃服務。我們的使命是讓每一位客戶都能享受到方便、舒適的旅程。</p>
     <h2>我們的優勢</h2>
     <div class="advantages">
@@ -40,7 +40,7 @@
 </template>
 
 <script setup>
-// 可以在這裡添加任何需要的邏輯
+import aboutImage from '../assets/images/benz.png';
 </script>
 
 <style scoped>

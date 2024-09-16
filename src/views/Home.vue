@@ -29,7 +29,7 @@ import ScrollingCards from '../components/ScrollingCards.vue';
 
 .hero {
   /* 設置背景圖片 */
-  background-image: url('/src/assets/images/home-bg.png');
+  background-image: url('../assets/images/home-bg.png');
   background-size: cover;
   background-position: center;
   color: white;

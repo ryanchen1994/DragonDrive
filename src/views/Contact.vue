@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <h1 class="section-title">聯繫我們</h1>
-    <div class="image-container" style="background-image: url('/src/assets/images/contact-us-6933645_1280.jpg')"></div>
+    <div class="image-container" :style="{ backgroundImage: `url(${contactImage})` }"></div>
     <div class="contact-content">
       <div class="contact-info">
         <h2>聯絡資訊</h2>
@@ -30,7 +30,7 @@
       </div>
       <div class="qr-code">
         <h2>官方 LINE 帳號</h2>
-        <img src="/src/assets/images/qr-code.png" alt="店家 QR Code">
+        <img src="../assets/images/qr-code.png" alt="店家 QR Code">
         <p>掃描上方 QR Code 加入好友</p>
       </div>
     </div>
@@ -49,8 +49,10 @@
 </template>
 
 <script setup>
-// 不需要任何腳本邏輯
+import contactImage from '../assets/images/contact-us-6933645_1280.jpg';
 </script>
+
+
 
 <style scoped>
 .contact {
