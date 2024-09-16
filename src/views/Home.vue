@@ -10,6 +10,9 @@
       <h2>為什麼選擇我們？</h2>
       <p>龍行天下小客車租賃公司擁有多年的租車服務經驗，我們的車隊包含各種類型的車輛，從經濟型到豪華車款應有盡有，每種車型均有配備專業的司機，個人包車到全班旅遊都能提供服務。</p>
     </div>
+    <div class="intro">
+      <h2>車型介紹</h2>
+    </div>
     <ScrollingCards />
     <div class="cta-buttons">
       <router-link to="/services" class="btn">查看我們的服務</router-link>

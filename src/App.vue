@@ -3,7 +3,11 @@
     <header>
       <nav>
         <router-link to="/" class="logo">龍行天下</router-link>
-        <button class="menu-toggle" @click="toggleMenu">☰</button> <!-- 漢堡選單按鈕 -->
+        <button class="menu-toggle" @click="toggleMenu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
         <ul :class="{ open: isMenuOpen }">
           <li><router-link to="/" @click="toggleMenu">首頁</router-link></li>
           <li><router-link to="/about" @click="toggleMenu">關於我們</router-link></li>
@@ -72,10 +76,35 @@ nav {
 
 .menu-toggle {
   display: none;
-  font-size: 24px;
   background: none;
   border: none;
   cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 25px;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
 }
 
 nav ul {
@@ -107,6 +136,13 @@ nav ul li a:hover {
     display: none;
     flex-direction: column;
     gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
   }
 
   nav ul.open {
@@ -115,6 +151,11 @@ nav ul li a:hover {
 
   nav ul li {
     margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    color: #333;
+    font-size: 18px;
   }
 }
 
