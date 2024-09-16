@@ -86,6 +86,24 @@ import contactImage from '../assets/images/contact-us-1908762_1280.png';
   .contact-info, .qr-code {
     flex-basis: 100%;
   }
+
+  .image-container {
+    width: 100%; /* 在小屏幕上，圖片容器寬度為 100% */
+    max-width: none; /* 移除最大寬度限制 */
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info, .qr-code {
+    flex-basis: 100%;
+  }
+
+  .image-container {
+    width: 100%; /* 在小屏幕上，圖片容器寬度為 100% */
+    max-width: none; /* 移除最大寬度限制 */
+    height: 100px;
+  }
 }
 
 .contact-info h2, .qr-code h2 {

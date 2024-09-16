@@ -83,19 +83,37 @@ const services = ref([
   .service-list {
     grid-template-columns: repeat(3, 1fr);
   }
-}
 
-/* 當螢幕寬度小於 900px 時，每行顯示2個卡片 */
-@media (max-width: 900px) {
-  .service-list {
-    grid-template-columns: repeat(2, 1fr);
+  .image-container {
+    width: 100%; /* 在小屏幕上，圖片容器寬度為 100% */
+    max-width: none; /* 移除最大寬度限制 */
+    height: 250px;
   }
 }
 
-/* 當螢幕寬度小於 600px 時，每行顯示1個卡片 */
-@media (max-width: 600px) {
+/* 當螢幕寬度小於 768px 時，每行顯示2個卡片 */
+@media (max-width: 768px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-container {
+    width: 100%; /* 在小屏幕上，圖片容器寬度為 100% */
+    max-width: none; /* 移除最大寬度限制 */
+    height: 200px;
+  }
+}
+
+/* 當螢幕寬度小於 480px 時，每行顯示1個卡片 */
+@media (max-width: 480px) {
   .service-list {
     grid-template-columns: 1fr;
+  }
+
+  .image-container {
+    width: 100%; /* 在小屏幕上，圖片容器寬度為 100% */
+    max-width: none; /* 移除最大寬度限制 */
+    height: 100px;
   }
 }
 </style>

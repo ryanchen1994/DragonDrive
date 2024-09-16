@@ -74,11 +74,23 @@ const advantages = [
   .advantages {
     grid-template-columns: repeat(2, 1fr); /* 中等螢幕調整為2個一排 */
   }
+
+  .image-container {
+    width: 100%; /* 在小屏幕上，圖片容器寬度為 100% */
+    max-width: none; /* 移除最大寬度限制 */
+    height: 200px;
+  }
 }
 
 @media (max-width: 480px) {
   .advantages {
     grid-template-columns: 1fr; /* 手機上每排1個 */
+  }
+
+  .image-container {
+    width: 100%; /* 在小屏幕上，圖片容器寬度為 100% */
+    max-width: none; /* 移除最大寬度限制 */
+    height: 100px;
   }
 }
 </style>
