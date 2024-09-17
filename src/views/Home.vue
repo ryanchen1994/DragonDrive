@@ -2,7 +2,8 @@
   <div class="home">
     <div class="hero">
       <div class="overlay">
-        <h1>歡迎來到龍行天下小客車租賃</h1>
+        <h1>歡迎來到龍行天下</h1>
+        <h1>小客車租賃</h1>
         <p>我們提供優質的小客車租賃服務，讓您的旅程更加舒適和便利。</p>
       </div>
     </div>
