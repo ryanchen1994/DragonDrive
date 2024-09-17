@@ -24,6 +24,16 @@ import eventImage from '../assets/images/artist-3480274_1280.jpg';
 import luxuryImage from '../assets/images/S__11903127_0.jpg';
 import driverImage from '../assets/images/driver-3978839_1280.jpg';
 
+import { useHead } from '@vueuse/head';
+
+useHead({
+  title: '我們的服務 - 龍行天下小客車租賃',
+  meta: [
+    { name: 'description', content: '了解龍行天下小客車租賃提供的各種租車服務，包括包車旅遊、機場接送、商業接待等。' },
+    { name: 'keywords', content: '租車服務, 包車旅遊, 機場接送, 商業接待, 婚禮車隊, 長途出差, 大型活動接送, 豪華車體驗, 專業司機' },
+  ]
+});
+
 const services = ref([
   { id: 1, title: '包車旅遊', description: '適合週末出遊或連假旅行的靈活租車選擇。', image: tourImage },
   { id: 2, title: '機場接送', description: '提供方便的機場接送服務，讓您的旅程更加輕鬆。', image: airportImage },

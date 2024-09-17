@@ -24,6 +24,16 @@
 
 <script setup>
 import ScrollingCards from '../components/ScrollingCards.vue';
+import { useHead } from '@vueuse/head';
+
+// 設定頁面的 meta 信息
+useHead({
+  title: '龍行天下 - 小客車租賃服務',
+  meta: [
+    { name: 'description', content: '龍行天下小客車租賃提供優質的租車服務，讓您的旅程更加舒適和便利。' },
+    { name: 'keywords', content: '小客車租賃, 租車服務, 龍行天下, 高品質服務' },
+  ]
+});
 </script>
 
 <style scoped>

@@ -16,6 +16,16 @@
 
 <script setup>
 import aboutImage from '../assets/images/benz.png';
+import { useHead } from '@vueuse/head';
+
+useHead({
+  title: '關於我們 - 龍行天下',
+  meta: [
+    { name: 'description', content: '了解更多關於龍行天下小客車租賃公司及我們的服務歷史和使命。' },
+    { name: 'keywords', content: '關於我們, 龍行天下, 小客車租賃' }
+  ]
+});
+
 
 const advantages = [
   { icon: 'fas fa-car', title: '豐富的車型選擇', description: '從經濟型到豪華車款，滿足不同需求' },

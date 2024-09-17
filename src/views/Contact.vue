@@ -50,6 +50,16 @@
 
 <script setup>
 import contactImage from '../assets/images/contact-us-1908762_1280.png';
+import { useHead } from '@vueuse/head';
+
+useHead({
+  title: '聯繫我們 - 龍行天下小客車租賃',
+  meta: [
+    { name: 'description', content: '聯繫龍行天下小客車租賃，獲取更多信息或安排服務。我們的聯絡資訊包括地址、電話、LINE ID 和 QR Code。' },
+    { name: 'keywords', content: '聯繫我們, 小客車租賃, 租車服務, 地址, 電話, LINE ID, QR Code' },
+  ]
+});
+
 </script>
 
 
