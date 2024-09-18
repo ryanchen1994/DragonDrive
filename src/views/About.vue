@@ -26,7 +26,6 @@ useHead({
   ]
 });
 
-
 const advantages = [
   { icon: 'fas fa-car', title: '豐富的車型選擇', description: '從經濟型到豪華車款，滿足不同需求' },
   { icon: 'fas fa-headset', title: '專業的客戶服務', description: '24小時全天候支援' },
