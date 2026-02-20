@@ -21,7 +21,7 @@
       <router-view></router-view>
     </main>
     <footer>
-      <p>&copy; 2026 龍行天下小客車租賃股份有限公司. 版權所有.</p>
+      <p>&copy; {{ currentYear }} 龍行天下小客車租賃股份有限公司. 版權所有.</p>
     </footer>
   </div>
 </template>
@@ -29,6 +29,7 @@
 <script setup>
 import { ref } from 'vue';
 
+const currentYear = new Date().getFullYear();
 const isMenuOpen = ref(false); // 漢堡選單狀態
 
 const toggleMenu = () => {
