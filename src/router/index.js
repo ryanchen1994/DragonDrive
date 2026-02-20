@@ -8,7 +8,9 @@ const routes = [
   { path: '/', component: Home, meta: { title: '首頁 - 龍行天下' } },
   { path: '/about', component: About, meta: { title: '關於我們 - 龍行天下' } },
   { path: '/services', component: Services, meta: { title: '我們的服務 - 龍行天下' } },
-  { path: '/contact', component: Contact, meta: { title: '聯繫我們 - 龍行天下' } }
+  { path: '/contact', component: Contact, meta: { title: '聯繫我們 - 龍行天下' } },
+  { path: '/recruit', name: 'Recruit', component: () => import('../views/Recruit.vue'), meta: { title: '人才招募 - 龍行天下' } 
+  }
 ];
 
 const router = createRouter({

@@ -13,6 +13,7 @@
           <li><router-link to="/about" @click="toggleMenu">關於我們</router-link></li>
           <li><router-link to="/services" @click="toggleMenu">提供服務</router-link></li>
           <li><router-link to="/contact" @click="toggleMenu">聯繫我們</router-link></li>
+          <li><router-link to="/recruit" @click="toggleMenu" class="nav-item">人才招募</router-link></li>
         </ul>
       </nav>
     </header>
@@ -20,7 +21,7 @@
       <router-view></router-view>
     </main>
     <footer>
-      <p>&copy; 2024 龍行天下小客車租賃股份有限公司. 版權所有.</p>
+      <p>&copy; 2026 龍行天下小客車租賃股份有限公司. 版權所有.</p>
     </footer>
   </div>
 </template>
